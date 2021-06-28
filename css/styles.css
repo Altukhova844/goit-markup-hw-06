@@ -386,17 +386,48 @@ img {
 
   color: var(--primary-text-color);
 }
-
-.form-field input {
+.input-box {
+  position: relative;
   display: flex;
+  justify-content: start;
   align-items: center;
+}
 
-  padding: 0 15px;
+.form-input {
   height: 40px;
+  width: 100%;
 
+  cursor: pointer;
+  padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+
+  transition-property: border;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.form-icon {
+  position: absolute;
+
+  left: 12px;
+  fill: var(--title-text-color);
+
+  transition-property: fill;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.form-input:focus,
+.form-input:hover {
+  outline: none;
+  border: 1px solid var(--accent-color);
+}
+
+.form-input:hover + .form-icon,
+.form-input:focus + .form-icon {
+  fill: var(--accent-color);
 }
 
 .comment-area {
@@ -411,7 +442,7 @@ img {
 }
 
 .comment-area::placeholder {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.01em;
 
@@ -927,8 +958,6 @@ address {
 
   fill: currentColor;
 }
-
-/* Modal */
 
 /* === СТИЛИ ДЛЯ portfolio.html === */
 
