@@ -61,9 +61,8 @@
             </div>
         </section>
 
-        <!-- Backdrop & Modal 
-        paste "is-hidden"-->
-        <div class="backdrop" data-modal>
+        <!-- Backdrop & Modal -->
+        <div class="backdrop is-hidden" data-modal>
             <div class="modal">
                 <button type="button" class="btn-close cursors" atl="Close" data-modal-close>
                     <svg class="icon-close" width="11" height="11">
@@ -76,12 +75,12 @@
                     
                     <div class="form-field">
                         <label for="name" class="form-label">Имя</label>
-                            <div class="input-box">
-                                <input type="text" class="form-input" name="name" id="name" />
-                                <svg class="form-icon" width="18" height="18">
-                                    <use href="./images/icons.svg#person-black"></use>
-                                </svg>
-                            </div>
+                        <div class="input-box">
+                            <input type="text" class="form-input" name="name" id="name" />
+                            <svg class="form-icon" width="18" height="18">
+                                <use href="./images/icons.svg#person-black"></use>
+                            </svg>
+                        </div>
                     </div>
                     
                     <div class="form-field">
@@ -96,14 +95,12 @@
                     
                     <div class="form-field">
                         <label for="mail" class="form-label">Почта</label>
-                            <div class="input-box">
-                                <input type="email" class="form-input" name="mail" id="mail" />
-                                <svg class="form-icon" width="18" height="18">
-                                    <use href="./images/icons.svg#email-black"></use>
-                                </svg>
-                            </div>
-                            
-                      
+                        <div class="input-box">
+                            <input type="email" class="form-input" name="mail" id="mail" />
+                            <svg class="form-icon" width="18" height="18">
+                                <use href="./images/icons.svg#email-black"></use>
+                            </svg>
+                        </div> 
                     </div>
 
                     <div class="form-field">
@@ -111,9 +108,13 @@
                         <textarea name="comment" id="comment" class="comment-area" placeholder="Введите текст"></textarea>
                     </div>
 
-                    <div class="">
-                        <input type="checkbox" name="" id="agree">
-                        <label for="agree" class="agree-label">Соглашаюсь с рассылкой и принимаю <span><a href="">Условия договора</a></span></label>
+                    <div class="check-box">
+                        <label class="agree-label">
+                            <input class="checkbox" type="checkbox" name="agree">
+                            <span class="agree-icon"></span>
+                            <span>Соглашаюсь с рассылкой и принимаю</span>&nbsp;
+                            <a href="">Условия договора</a>
+                        </label>
                     </div>
                     
                     <button type="submit" class="btn-m-submit cursors">Отправить</button>
@@ -542,7 +543,7 @@
                     <div class="subscribe-list">
                         <input type="email" class="subscribe-input" name="mail" id="mail" placeholder="E-mail" />
                         <button class="subscribe-btn cursors">
-                            <p>Подписаться</p>
+                            Подписаться
                             <svg class="icon-send" width="24" height="24">
                                 <use href="./images/icons.svg#send"></use>
                             </svg>

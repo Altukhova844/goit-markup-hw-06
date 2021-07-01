@@ -364,7 +364,7 @@ img {
 
   font-weight: bold;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
@@ -436,9 +436,14 @@ img {
   height: 120px;
   padding: 12px 16px;
 
+  cursor: pointer;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+
+  transition-property: border;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .comment-area::placeholder {
@@ -449,10 +454,48 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.comment-area:hover,
+.comment-area:focus {
+  outline: none;
+  border: 1px solid var(--accent-color);
+}
+
+.checkbox {
+  appearance: none;
+}
+
+.agree-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+
+  background-image: url("../images/check-empty.svg");
+
+  /* border: 2px solid var(--title-text-color);
+  border-radius: 2px; */
+}
+
+.checkbox:checked + .agree-icon {
+  width: 16px;
+  height: 15px;
+  background: var(--accent-color);
+  border-radius: 2px;
+
+  background-image: url("../images/check-full.svg");
+  background-size: contain;
+}
+
 .agree-label {
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
+  padding: 0;
 
   color: #757575;
 }
@@ -473,7 +516,7 @@ img {
 
   font-weight: bold;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.9;
   letter-spacing: 0.06em;
 
   color: var(--primary-white-color);
@@ -914,8 +957,9 @@ address {
   height: 50px;
 
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -927,7 +971,7 @@ address {
 
 .subscribe-list input::placeholder {
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
